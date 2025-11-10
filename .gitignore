@@ -1,0 +1,84 @@
+# ======================================
+# Django & Python .gitignore Template
+# ======================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# If you collect static files into a folder named 'static'
+static/
+
+# Environment variables
+.env
+*.env
+
+# MySQL / PostgreSQL dumps
+*.sql
+
+# macOS files
+.DS_Store
+
+# Windows image cache files
+Thumbs.db
+
+# PyCharm / JetBrains project settings
+.idea/
+
+# pip logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.pytest_cache/
+
+# Build files
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
