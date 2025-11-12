@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1762946058826,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762949413488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     flags = serializers.SerializerMethodField()\r\n     \r\n     class Meta:\r\n         model = LiveStream\r\n-        fields = ['id', 'title', 'teams', 'type', 'src', 'flags', 'start_time' 'created_at']\r\n+        fields = ['id', 'title', 'teams', 'type', 'src', 'flags', 'start_time', 'created_at']\r\n         \r\n         \r\n     def get_flags(self, obj):\r\n         return {\r\n@@ -26,5 +26,8 @@\n         fields = ['id', 'image', 'order', 'created_at']  \r\n         \r\n     \r\n     \r\n-    \n\\ No newline at end of file\n+class AppVersionSerializer(serializers.ModelSerializer):\r\n+    class Meta:\r\n+        model = AppVersion\r\n+        fields = ['version_code', 'version_name', 'download_link', 'force_update', 'release_notes']    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762949422154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n from rest_framework import serializers\r\n-from .models import LiveStream, CrouselData\r\n+from .models import LiveStream, CrouselData, \r\n \r\n \r\n \r\n class LiveStreamSerializer(serializers.ModelSerializer):\r\n"
                 }
             ],
             "date": 1762946058826,

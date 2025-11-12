@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1762945707699,
@@ -28,6 +28,10 @@
                 {
                     "date": 1762945756000,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n \r\n     flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n     flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n-    start_time = models.DateTimeField(null=t)  # ✅ new field for match schedule\r\n+    start_time = models.DateTimeField(null=True, blank=True)  # ✅ new field for match schedule\r\n     created_at = models.DateTimeField(auto_now_add=True)\r\n \r\n     def __str__(self):\r\n         return self.title\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762949396705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,5 +28,9 @@\n     start_time = models.DateTimeField(null=True, blank=True)  # ✅ new field for match schedule\r\n     created_at = models.DateTimeField(auto_now_add=True)\r\n \r\n     def __str__(self):\r\n-        return self.title\n\\ No newline at end of file\n+        return self.title\r\n+    \r\n+    \r\n+    \r\n+    \n\\ No newline at end of file\n"
                 }
             ],
             "date": 1762945707699,

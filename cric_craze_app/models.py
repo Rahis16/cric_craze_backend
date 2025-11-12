@@ -30,3 +30,16 @@ class LiveStream(models.Model):
 
     def __str__(self):
         return self.title
+    
+    
+    
+class AppVersion(models.Model):
+    version_code = models.PositiveIntegerField()
+    version_name = models.CharField(max_length=20)
+    download_link = models.URLField()
+    force_update = models.BooleanField(default=False)
+    release_notes = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.version_name} ({self.version_code})"    

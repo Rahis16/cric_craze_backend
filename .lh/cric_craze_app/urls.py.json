@@ -1,0 +1,22 @@
+{
+    "sourceFile": "cric_craze_app/urls.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1762949528350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762949537518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n urlpatterns = [\r\n     path(\"\", views.home, name=\"home\"),\r\n     path(\"api/v1/live-streams/\", views.live_streams, name=\"live_streams\"),\r\n     path(\"api/v1/crousel-data/\", views.crousel_data, name=\"crousel_data\"),\r\n-    path('latest-app-version/', LatestAppVersionView.as_view(), name='latest-app-version'),\r\n+    path('latest-app-version/', views.LatestAppVersionView.as_view(), name='latest-app-version'),\r\n ]\r\n \r\n"
+                }
+            ],
+            "date": 1762949528350,
+            "name": "Commit-0",
+            "content": "from django.urls import path\r\nfrom . import views\r\n\r\nurlpatterns = [\r\n    path(\"\", views.home, name=\"home\"),\r\n    path(\"api/v1/live-streams/\", views.live_streams, name=\"live_streams\"),\r\n    path(\"api/v1/crousel-data/\", views.crousel_data, name=\"crousel_data\"),\r\n    path('latest-app-version/', LatestAppVersionView.as_view(), name='latest-app-version'),\r\n]\r\n\r\n"
+        }
+    ]
+}

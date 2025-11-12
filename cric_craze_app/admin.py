@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import LiveStream, CrouselData
+from .models import AppVersion, LiveStream, CrouselData
 
 
 # Register your models here.
@@ -13,3 +13,8 @@ class CrouselDataAdmin(admin.ModelAdmin):
     ordering = ('order',)
     readonly_fields = ('created_at',)
     fields = ('image', 'order', 'created_at')
+
+
+@admin.register(AppVersion)
+class AppVersionAdmin(admin.ModelAdmin):
+    list_display = ('version_name', 'version_code', 'force_update', 'created_at')

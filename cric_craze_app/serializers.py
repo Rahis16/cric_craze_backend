@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from .models import LiveStream, CrouselData
+from .models import LiveStream, CrouselData, AppVersion
+
+
 
 
 
@@ -27,4 +29,7 @@ class CrouselDataSerializer(serializers.ModelSerializer):
         
     
     
-    
+class AppVersionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AppVersion
+        fields = ['version_code', 'version_name', 'download_link', 'force_update', 'release_notes']    
