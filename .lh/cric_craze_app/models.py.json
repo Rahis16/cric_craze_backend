@@ -1,0 +1,38 @@
+{
+    "sourceFile": "cric_craze_app/models.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1762945707699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762945717346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n \r\n     flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n     flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n-    start_time = models.DateTimeField()  # ✅ new field for match schedule\r\n+    start_time = models.DateTimeField(def)  # ✅ new field for match schedule\r\n     created_at = models.DateTimeField(auto_now_add=True)\r\n \r\n     def __str__(self):\r\n         return self.title\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762945722522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n \r\n     flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n     flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n-    start_time = models.DateTimeField(def)  # ✅ new field for match schedule\r\n+    start_time = models.DateTimeField(default=cu)  # ✅ new field for match schedule\r\n     created_at = models.DateTimeField(auto_now_add=True)\r\n \r\n     def __str__(self):\r\n         return self.title\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762945739939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+from django.db import models\r\n+\r\n+\r\n+class CrouselData(models.Model):\r\n+    image = models.ImageField(upload_to='crousel_images/')\r\n+    order = models.IntegerField()\r\n+    created_at = models.DateTimeField(auto_now_add=True)\r\n+\r\n+    class Meta:\r\n+        ordering = ['order']\r\n+\r\n+\r\n+# Create your models here.\r\n+class LiveStream(models.Model):\r\n+    STREAM_TYPE_CHOICES = [\r\n+        ('yt', 'YouTube'),\r\n+        ('m3u8', 'M3U8'),\r\n+        ('embed', 'Embedded Link'),\r\n+    ]\r\n+\r\n+    title = models.CharField(max_length=255)\r\n+    teams = models.CharField(max_length=255)\r\n+    type = models.CharField(max_length=10, choices=STREAM_TYPE_CHOICES)\r\n+    src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n+\r\n+    flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n+    flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n+    start_time = models.DateTimeField(nu)  # ✅ new field for match schedule\r\n+    created_at = models.DateTimeField(auto_now_add=True)\r\n+\r\n+    def __str__(self):\r\n+        return self.title\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762945746793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,41 +24,9 @@\n     src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n \r\n     flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n     flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n-    start_time = models.DateTimeField(nu)  # ✅ new field for match schedule\r\n+    start_time = models.DateTimeField(null=t)  # ✅ new field for match schedule\r\n     created_at = models.DateTimeField(auto_now_add=True)\r\n \r\n     def __str__(self):\r\n-        return self.title\n-from django.db import models\r\n-\r\n-\r\n-class CrouselData(models.Model):\r\n-    image = models.ImageField(upload_to='crousel_images/')\r\n-    order = models.IntegerField()\r\n-    created_at = models.DateTimeField(auto_now_add=True)\r\n-\r\n-    class Meta:\r\n-        ordering = ['order']\r\n-\r\n-\r\n-# Create your models here.\r\n-class LiveStream(models.Model):\r\n-    STREAM_TYPE_CHOICES = [\r\n-        ('yt', 'YouTube'),\r\n-        ('m3u8', 'M3U8'),\r\n-        ('embed', 'Embedded Link'),\r\n-    ]\r\n-\r\n-    title = models.CharField(max_length=255)\r\n-    teams = models.CharField(max_length=255)\r\n-    type = models.CharField(max_length=10, choices=STREAM_TYPE_CHOICES)\r\n-    src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n-\r\n-    flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n-    flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n-    start_time = models.DateTimeField(default=cu)  # ✅ new field for match schedule\r\n-    created_at = models.DateTimeField(auto_now_add=True)\r\n-\r\n-    def __str__(self):\r\n         return self.title\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762945756000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n \r\n     flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n     flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n-    start_time = models.DateTimeField(null=t)  # ✅ new field for match schedule\r\n+    start_time = models.DateTimeField(null=True, blank=True)  # ✅ new field for match schedule\r\n     created_at = models.DateTimeField(auto_now_add=True)\r\n \r\n     def __str__(self):\r\n         return self.title\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1762945707699,
+            "name": "Commit-0",
+            "content": "from django.db import models\r\n\r\n\r\nclass CrouselData(models.Model):\r\n    image = models.ImageField(upload_to='crousel_images/')\r\n    order = models.IntegerField()\r\n    created_at = models.DateTimeField(auto_now_add=True)\r\n\r\n    class Meta:\r\n        ordering = ['order']\r\n\r\n\r\n# Create your models here.\r\nclass LiveStream(models.Model):\r\n    STREAM_TYPE_CHOICES = [\r\n        ('yt', 'YouTube'),\r\n        ('m3u8', 'M3U8'),\r\n        ('embed', 'Embedded Link'),\r\n    ]\r\n\r\n    title = models.CharField(max_length=255)\r\n    teams = models.CharField(max_length=255)\r\n    type = models.CharField(max_length=10, choices=STREAM_TYPE_CHOICES)\r\n    src = models.CharField(max_length=500, help_text=\"YouTube video ID or stream URL\")\r\n\r\n    flag_left = models.URLField(max_length=500, blank=True, null=True)\r\n    flag_right = models.URLField(max_length=500, blank=True, null=True)\r\n    start_time = models.DateTimeField()  # ✅ new field for match schedule\r\n    created_at = models.DateTimeField(auto_now_add=True)\r\n\r\n    def __str__(self):\r\n        return self.title"
+        }
+    ]
+}

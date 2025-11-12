@@ -25,7 +25,7 @@ class LiveStream(models.Model):
 
     flag_left = models.URLField(max_length=500, blank=True, null=True)
     flag_right = models.URLField(max_length=500, blank=True, null=True)
-
+    start_time = models.DateTimeField(null=True, blank=True)  # ✅ new field for match schedule
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
