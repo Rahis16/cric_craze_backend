@@ -36,5 +36,5 @@ class LatestAppVersionView(APIView):
         latest_version = AppVersion.objects.order_by('-version_code').first()
         if not latest_version:
             return Response({"detail": "No version found."}, status=status.HTTP_404_NOT_FOUND)
-        serializer = AppVersionSerializer(latest_version)
+        serializer = AppVersionSerializer(latest_version, context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
