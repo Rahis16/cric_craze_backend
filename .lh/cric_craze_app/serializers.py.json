@@ -1,0 +1,18 @@
+{
+    "sourceFile": "cric_craze_app/serializers.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762946058826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762946058826,
+            "name": "Commit-0",
+            "content": "from rest_framework import serializers\r\nfrom .models import LiveStream, CrouselData\r\n\r\n\r\n\r\nclass LiveStreamSerializer(serializers.ModelSerializer):\r\n    \r\n    flags = serializers.SerializerMethodField()\r\n    \r\n    class Meta:\r\n        model = LiveStream\r\n        fields = ['id', 'title', 'teams', 'type', 'src', 'flags', 'start_time' 'created_at']\r\n        \r\n        \r\n    def get_flags(self, obj):\r\n        return {\r\n            'left': obj.flag_left,\r\n            'right': obj.flag_right,\r\n        }\r\n\r\n\r\nclass CrouselDataSerializer(serializers.ModelSerializer):\r\n    \r\n    class Meta:\r\n        model = CrouselData\r\n        fields = ['id', 'image', 'order', 'created_at']  \r\n        \r\n    \r\n    \r\n    "
+        }
+    ]
+}

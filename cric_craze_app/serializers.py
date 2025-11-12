@@ -9,7 +9,7 @@ class LiveStreamSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = LiveStream
-        fields = ['id', 'title', 'teams', 'type', 'src', 'flags', 'created_at']
+        fields = ['id', 'title', 'teams', 'type', 'src', 'flags', 'start_time', 'created_at']
         
         
     def get_flags(self, obj):
