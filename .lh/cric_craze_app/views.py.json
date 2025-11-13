@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1762949447832,
@@ -32,6 +32,10 @@
                 {
                     "date": 1762952124793,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,6 +35,6 @@\n     def get(self, request):\r\n         latest_version = AppVersion.objects.order_by('-version_code').first()\r\n         if not latest_version:\r\n             return Response({\"detail\": \"No version found.\"}, status=status.HTTP_404_NOT_FOUND)\r\n-        serializer = AppVersionSerializer(latest_version)\r\n+        serializer = AppVersionSerializer(latest_version, context={'request': request})\r\n         return Response(serializer.data, status=status.HTTP_200_OK)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1763038617565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n \r\n # Create your views here.\r\n def home(request):\r\n-    return HttpResponse(\"<h1>Cric Craze Nepal</h1>\")\r\n+    return render\r\n \r\n \r\n @api_view(['GET'])\r\n def live_streams(request):\r\n"
                 }
             ],
             "date": 1762949447832,

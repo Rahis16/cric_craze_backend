@@ -10,7 +10,9 @@ from rest_framework.views import APIView
 
 # Create your views here.
 def home(request):
-    return HttpResponse("<h1>Cric Craze Nepal</h1>")
+    return render(request, 'index.html')
+
+
 
 
 @api_view(['GET'])
