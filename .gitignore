@@ -28,7 +28,7 @@ staticfiles/
 local_settings.py
 
 # If you collect static files into a folder named 'static'
-static/
+# static/
 
 # Environment variables
 .env

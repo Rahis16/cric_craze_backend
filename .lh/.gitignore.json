@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1762769703876,
@@ -16,6 +16,10 @@
                 {
                     "date": 1762769725735,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,84 @@\n+# ======================================\r\n+# Django & Python .gitignore Template\r\n+# ======================================\r\n+\r\n+# Byte-compiled / optimized / DLL files\r\n+__pycache__/\r\n+*.py[cod]\r\n+*$py.class\r\n+\r\n+# Virtual environment\r\n+venv/\r\n+env/\r\n+ENV/\r\n+.venv/\r\n+.pyenv/\r\n+.venv/\r\n+\r\n+# VS Code settings\r\n+.vscode/\r\n+\r\n+# Django stuff:\r\n+*.log\r\n+*.pot\r\n+*.pyc\r\n+db.sqlite3\r\n+media/\r\n+staticfiles/\r\n+local_settings.py\r\n+\r\n+# If you collect static files into a folder named 'static'\r\n+static/\r\n+\r\n+# Environment variables\r\n+.env\r\n+*.env\r\n+\r\n+# MySQL / PostgreSQL dumps\r\n+*.sql\r\n+\r\n+# macOS files\r\n+.DS_Store\r\n+\r\n+# Windows image cache files\r\n+Thumbs.db\r\n+\r\n+# PyCharm / JetBrains project settings\r\n+.idea/\r\n+\r\n+# pip logs\r\n+pip-log.txt\r\n+pip-delete-this-directory.txt\r\n+\r\n+# Coverage reports\r\n+htmlcov/\r\n+.coverage\r\n+.coverage.*\r\n+.cache\r\n+nosetests.xml\r\n+coverage.xml\r\n+*.cover\r\n+*.py,cover\r\n+\r\n+# Mypy\r\n+.mypy_cache/\r\n+.dmypy.json\r\n+dmypy.json\r\n+\r\n+# Pytest\r\n+.pytest_cache/\r\n+\r\n+# Build files\r\n+build/\r\n+dist/\r\n+.eggs/\r\n+*.egg-info/\r\n+\r\n+# Jupyter Notebook checkpoints\r\n+.ipynb_checkpoints\r\n+\r\n+# Backup files\r\n+*.bak\r\n+*.swp\r\n+*.swo\r\n+*~\r\n"
+                },
+                {
+                    "date": 1763039684591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n staticfiles/\r\n local_settings.py\r\n \r\n # If you collect static files into a folder named 'static'\r\n-static/\r\n+# static/\r\n \r\n # Environment variables\r\n .env\r\n *.env\r\n@@ -81,88 +81,4 @@\n *.bak\r\n *.swp\r\n *.swo\r\n *~\r\n-# ======================================\r\n-# Django & Python .gitignore Template\r\n-# ======================================\r\n-\r\n-# Byte-compiled / optimized / DLL files\r\n-__pycache__/\r\n-*.py[cod]\r\n-*$py.class\r\n-\r\n-# Virtual environment\r\n-.venv/\r\n-env/\r\n-ENV/\r\n-.venv/\r\n-.pyenv/\r\n-.venv/\r\n-\r\n-# VS Code settings\r\n-.vscode/\r\n-\r\n-# Django stuff:\r\n-*.log\r\n-*.pot\r\n-*.pyc\r\n-db.sqlite3\r\n-media/\r\n-staticfiles/\r\n-local_settings.py\r\n-\r\n-# If you collect static files into a folder named 'static'\r\n-static/\r\n-\r\n-# Environment variables\r\n-.env\r\n-*.env\r\n-\r\n-# MySQL / PostgreSQL dumps\r\n-*.sql\r\n-\r\n-# macOS files\r\n-.DS_Store\r\n-\r\n-# Windows image cache files\r\n-Thumbs.db\r\n-\r\n-# PyCharm / JetBrains project settings\r\n-.idea/\r\n-\r\n-# pip logs\r\n-pip-log.txt\r\n-pip-delete-this-directory.txt\r\n-\r\n-# Coverage reports\r\n-htmlcov/\r\n-.coverage\r\n-.coverage.*\r\n-.cache\r\n-nosetests.xml\r\n-coverage.xml\r\n-*.cover\r\n-*.py,cover\r\n-\r\n-# Mypy\r\n-.mypy_cache/\r\n-.dmypy.json\r\n-dmypy.json\r\n-\r\n-# Pytest\r\n-.pytest_cache/\r\n-\r\n-# Build files\r\n-build/\r\n-dist/\r\n-.eggs/\r\n-*.egg-info/\r\n-\r\n-# Jupyter Notebook checkpoints\r\n-.ipynb_checkpoints\r\n-\r\n-# Backup files\r\n-*.bak\r\n-*.swp\r\n-*.swo\r\n-*~\r\n"
                 }
             ],
             "date": 1762769703876,
