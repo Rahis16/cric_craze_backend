@@ -10,7 +10,9 @@ from rest_framework.views import APIView
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    app_update = AppVersion.objects.order_by('-version_code').first()
+    context = {'app_update': app_update}
+    return render(request, 'index.html', context=context)
 
 
 

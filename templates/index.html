@@ -1,144 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cric Craze - Download Now</title>
-  {% load static %}
-  <link rel="icon" href="{% static 'images/cric2.png' %}" />
-  <style>
-    /* ===== Reset & Base ===== */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #e6f4fe, #ffffff);
-      color: #111;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    /* ===== Card ===== */
-    .card {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      max-width: 440px;
-      width: 100%;
-      transition: 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
-    }
-
-    /* ===== App Icon ===== */
-    .app-logo {
-      width: 120px;
-      height: 120px;
-      border-radius: 30%;
-      margin-bottom: 1rem;
-      object-fit: cover;
-      border: 4px solid #e6f4fe;
-    }
-
-    /* ===== Text ===== */
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      color: #555;
-      margin-bottom: 1.8rem;
-      line-height: 1.5;
-    }
-
-    /* ===== Button ===== */
-    .download-btn {
-      display: inline-block;
-      background: linear-gradient(90deg, #007bff, #00c6ff);
-      color: white;
-      padding: 0.9rem 2.2rem;
-      border-radius: 50px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-      transition: all 0.3s ease;
-      margin-bottom: 1.5rem;
-    }
-    .download-btn:hover {
-      background: linear-gradient(90deg, #0056d1, #00a2e8);
-      transform: scale(1.05);
-    }
-
-    /* ===== QR Section ===== */
-    .qr-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 1rem;
-    }
-    .qr-section img {
-      width: 150px;
-      height: 150px;
-      margin-bottom: 0.5rem;
-      border: 3px solid #e6f4fe;
-      border-radius: 12px;
-      transition: 0.3s ease;
-    }
-    .qr-section img:hover {
-      transform: scale(1.05);
-    }
-    .qr-section span {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: #777;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 480px) {
-      .card {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cric Craze - Download Now</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/cric2.png' %}" />
+    <style>
+      /* ===== Reset & Base ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #e6f4fe, #ffffff);
+        color: #111;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
         padding: 1.5rem;
       }
-      h1 {
-        font-size: 1.5rem;
+      
+      /* ===== Card ===== */
+      .card {
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        max-width: 440px;
+        width: 100%;
+        transition: 0.3s ease;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <img src="{% static 'images/cric2.png' %}" alt="Cric Craze Logo" class="app-logo" />
-    <h1>Cric Craze</h1>
-    <p>The ultimate cricket experience — live scores, streams, and tournaments. Download now and join the craze!</p>
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+      }
+      
+      /* ===== App Icon ===== */
+      .app-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 30%;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        border: 4px solid #e6f4fe;
+      }
+      
+      /* ===== Text ===== */
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: #555;
+        margin-bottom: 1.8rem;
+        line-height: 1.5;
+      }
+      
+      /* ===== Button ===== */
+      .download-btn {
+        display: inline-block;
+       background: linear-gradient(90deg, #7F0000, #FF0000); /* Very Dark Red to Pure Red */
+;
+        color: white;
+        padding: 0.9rem 2.2rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 4px 12px 0 4px 12px rgba(255, 75, 31, 0.4);
+        transition: all 0.3s ease;
+        margin-bottom: 1.5rem;
+      }
+      .download-btn:hover {
+        background: linear-gradient(90deg, #8B0000, #FF4500); /* DarkRed to OrangeRed */
+        transform: scale(1.05);
+      }
+      
+      /* ===== QR Section ===== */
+      .qr-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      .qr-section img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 0.5rem;
+        border: 3px solid #e6f4fe;
+        border-radius: 12px;
+        transition: 0.3s ease;
+      }
+      .qr-section img:hover {
+        transform: scale(1.05);
+      }
+      .qr-section span {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      
+      /* ===== Footer ===== */
+      footer {
+        margin-top: 2rem;
+        font-size: 0.85rem;
+        color: #777;
+      }
+      
+      /* ===== Version, Release Note, Release Date ===== */
+      .release-info {
+        background: #f0f8ff; /* soft background */
+        border-left: 4px solid #7F0000; /* accent line */
+        padding: 1rem 1.2rem;
+        margin: 1rem 0 1.5rem 0;
+        border-radius: 12px;
+        text-align: left;
+        color: #333;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .release-info:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
+      
+      .release-info h5 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        color: #7F0000;
+      }
+      
+      .release-info p {
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        color: #555;
+      }
+      
+      .release-info span {
+        font-size: 0.85rem;
+        color: #666;
+        font-style: italic;
+      }
+      
+      /* ===== Responsive ===== */
+      @media (max-width: 480px) {
+        .release-info {
+          font-size: 0.9rem;
+          padding: 0.8rem 1rem;
+        }
+      }
+      
+      /* ===== Responsive ===== */
+      @media (max-width: 480px) {
+        .card {
+          padding: 1.5rem;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="{% static 'images/cric2.png' %}" alt="Cric Craze Logo" class="app-logo" />
+      <h1>Cric Craze</h1>
+      <p>The ultimate cricket experience — live scores, streams, and tournaments. Download now and join the craze!</p>
 
-    <!-- 🔗 Replace with your actual APK URL -->
-    <a href="https://expo.dev/artifacts/eas/oY1abMtcpk21uhxiejv4Cr.apk" class="download-btn">
-      📱 Download APK
-    </a>
+      <!-- 🔗 Replace with your actual APK URL -->
+      <a href="{{ app_update.download_link }}" class="download-btn">📱 Download APK</a>
 
-    <!-- 🧾 QR Code -->
-    <div class="qr-section">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://expo.dev/artifacts/eas/oY1abMtcpk21uhxiejv4Cr.apk" alt="Download via QR" />
-      <span>Scan to download on your phone</span>
+      <!-- 🧾 QR Code -->
+      <div class="qr-section">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ app_update.download_link }}" alt="Download via QR" />
+        <span>Scan to download on your phone</span>
+      </div>
+      <div class="release-info">
+        <h5>Version:</h5>
+        <p>{{ app_update.version_name }} ({{ app_update.version_code }})</p>
+
+        <h5>Release Note:</h5>
+        <p>{{ app_update.release_notes }}</p>
+
+        <h5>Release Date:</h5>
+        <span>{{ app_update.created_at }}</span>
+      </div>
     </div>
-  </div>
 
-  <footer>
-    © 2025 Cric Craze | Made by Malang Code Innovators Pvt. Ltd.
-  </footer>
-</body>
+    <footer>© 2025 Cric Craze | Made by Malang Code Innovators Pvt. Ltd.</footer>
+  </body>
 </html>

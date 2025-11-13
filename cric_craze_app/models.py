@@ -36,16 +36,10 @@ class LiveStream(models.Model):
 class AppVersion(models.Model):
     version_code = models.PositiveIntegerField()
     version_name = models.CharField(max_length=20)
-    apk_file = models.FileField(upload_to='apks/', help_text="Upload APK here", null=True, blank=True)
+    download_link = models.URLField(blank=True, null=True)
     force_update = models.BooleanField(default=False)
     release_notes = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.version_name} ({self.version_code})"    
-    
-    @property
-    def download_link(self):
-        if self.apk_file:
-            return self.apk_file.url
-        return ""
